@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project, undertaken as part of the Data Structure and Algorithms course (Fall 2023-24), focuses on optimizing corpus query processing using a fusion of a custom search engine and Large Language Models (LLMs). The assignment involved implementing a search mechanism and scoring system to identify top-k paragraphs for input queries, feeding them to LLMs to improve results, and speed up queries for large documents.
+This project, undertaken as part of the Data Structures and Algorithms course (Fall 2023-24), focuses on optimizing corpus query processing using a fusion of a custom search engine and Large Language Models (LLMs). The assignment involved implementing a search mechanism and scoring system to identify top-k paragraphs for input queries, feeding them to LLMs to improve results and speed up queries for large documents.
 
 ## Project Components
 
@@ -10,7 +10,7 @@ This project, undertaken as part of the Data Structure and Algorithms course (Fa
 
 #### Search Results Ranking (Finding Top-k Paragraphs)
 Our search mechanism involves the following steps:
-1. **Elimination of Stop Words:** Removing common stop words to enhance query accuracy.
+1. **Eliminating Stop Words:** Removing common stop words to enhance query accuracy.
 2. **Word Score Adjustment:** Modifying word scores using a tailored formula.
    - Word score calculation: \( Score(w) = \log\left( \frac{Total\:word\:in\:corpus}{Count\:of\:w\:in\:corpus} + 1 \right) \)
    - Paragraph score calculation: \( Score(para) = \sum Score(w) \times (Count\:of\:w\:in\:para) \)
@@ -18,7 +18,7 @@ Our search mechanism involves the following steps:
 ### 2. Fusion with LLMs
 
 #### Querying the LLM
-To enhance speed and specific results, we fused our custom search engine with LLMs, utilizing tools and technologies such as Hashing and vectors for word processing, scoring paragraphs, and Minheap for obtaining top-k paragraphs. The OpenAI Python module facilitated query requests to ChatGPT.
+We fused our custom search engine with LLMs to enhance speed and specific results, utilizing tools and technologies such as Hashing and vectors for word processing, scoring paragraphs, and Minheap for obtaining top-k paragraphs. The OpenAI Python module facilitated query requests to ChatGPT.
 
 ## Performance Metrics
 
@@ -43,20 +43,20 @@ In the second segment of the assignment, several methodologies were implemented 
 
 ### Requirements
 - Python 3
-- openai
+- OpenAI
 
 ### Building Data Structure
-Before this please make sure written your OpenAI API Key and relvent query also you can add you txt files in corpus and make the suiltable changes in `main.cpp`.
+Before this, please write your OpenAI API Key and relevant query. Also, you can add your txt files in the corpus and make the suitable changes in `main.cpp`.
 Run the following bash command:
 ```
 make
 ```
 After inserting all corpus data, input the number of queries from "queries.txt" in the terminal.
 Run tools using ```make run```
-Now you will bw able to see your Answer on terminal, also in output.txt with additional relevent paragraphes.
-Note: For running this tool, you need an OpenAI API key which can be obtained by signing up at [OpenAI](https://openai.com/product)
+Now, you will be able to see your answer on the terminal and output.txt with additional relevant paragraphs.<br>
+Note: To run this tool, you need an OpenAI API key, which can be obtained by signing in at [OpenAI](https://openai.com/product)<br>
 Enjoy querying! 🙂
 
 #### Follow Up
-If you find an issue please do ping me or create a PR :)
-P.S. : If you find it useful please give a star to it.
+If you find an issue, please ping me or create a PR :)
+P.S.: If you find it useful, please give it a star.
